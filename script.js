@@ -1,4 +1,4 @@
-const THEME = "padrao"; // use "natal" para ativar o tema de Natal
+const THEME = "normal"; // use "natal" para ativar o tema de Natal
 if (THEME === "natal") {
   document.documentElement.classList.add("natal");
   [...document.querySelectorAll(".hero-art .media")].forEach(
