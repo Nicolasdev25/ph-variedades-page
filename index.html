@@ -93,10 +93,61 @@
             </div>
           </div>
           <div class="hero-art reveal">
-            <div class="media g-toy">🧸</div>
-            <div class="media g-flower">🌹</div>
-            <div class="media g-plant">🌿</div>
-            <div class="media g-blue">🎁</div>
+            <div
+              class="carousel"
+              id="car"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Destaques da PH Variedades"
+            >
+              <div class="media g-toy on">
+                <span class="emo">🧸</span
+                ><img
+                  class="photo"
+                  src="assets/hero-crianca-carrinho.jpg"
+                  style="object-position: 50% 58%"
+                  alt="Criança brincando com um carrinho"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Brinquedos que fazem sorrir</span>
+              </div>
+              <div class="media g-flower">
+                <span class="emo">🌹</span
+                ><img
+                  class="photo"
+                  src="assets/hero-flores.jpg"
+                  style="object-position: 50% 55%"
+                  alt="Arranjo de flores"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Flores e arranjos</span>
+              </div>
+              <div class="media g-plant">
+                <span class="emo">🌿</span
+                ><img
+                  class="photo"
+                  src="assets/hero-plantas.jpg"
+                  style="object-position: 50% 70%"
+                  alt="Jardim vertical e plantas"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Plantas e jardim vertical</span>
+              </div>
+              <div class="media g-blue">
+                <span class="emo">🎁</span
+                ><img
+                  class="photo"
+                  src="assets/hero-presentes.jpg"
+                  style="object-position: 50% 60%"
+                  alt="Presentes"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Presentes para todos</span>
+              </div>
+              <button class="car-btn prev" aria-label="Foto anterior">‹</button
+              ><button class="car-btn next" aria-label="Próxima foto">›</button>
+              <div class="car-dots"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -121,7 +172,16 @@
           </p>
           <div class="cards" style="text-align: left">
             <article class="card reveal">
-              <div class="media g-toy">🚗</div>
+              <div class="media g-toy">
+                <span class="emo">🚗</span
+                ><img
+                  class="photo"
+                  src="assets/brinquedos.jpg"
+                  alt="Brinquedos"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
               <div class="body">
                 <h3>Brinquedos</h3>
                 <p>
@@ -142,7 +202,16 @@
               </div>
             </article>
             <article class="card reveal">
-              <div class="media g-flower">💐</div>
+              <div class="media g-flower">
+                <span class="emo">💐</span
+                ><img
+                  class="photo"
+                  src="assets/decoracao.jpg"
+                  alt="Decoração e arranjos de flores"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
               <div class="body">
                 <h3>Decoração e flores</h3>
                 <p>
@@ -163,7 +232,16 @@
               </div>
             </article>
             <article class="card reveal">
-              <div class="media g-plant">🌳</div>
+              <div class="media g-plant">
+                <span class="emo">🌳</span
+                ><img
+                  class="photo"
+                  src="assets/plantas.jpg"
+                  alt="Árvores montadas e jardim vertical"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
               <div class="body">
                 <h3>Plantas e jardim vertical</h3>
                 <p>
@@ -208,7 +286,17 @@
               >Ver ofertas no WhatsApp</a
             >
           </div>
-          <div class="media g-toy reveal" style="height: 340px">🎈</div>
+          <div class="media g-toy reveal" style="height: 420px">
+            <span class="emo">🎈</span
+            ><img
+              class="photo"
+              src="assets/dia-das-criancas.jpg"
+              style="object-position: 50% 50%"
+              alt="Crianças brincando com brinquedos"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </div>
         </div>
       </section>
 
@@ -237,7 +325,16 @@
               >Ver ofertas de Natal</a
             >
           </div>
-          <div class="media g-blue reveal">🎄</div>
+          <div class="media g-blue reveal">
+            <span class="emo">🎄</span
+            ><img
+              class="photo"
+              src="assets/natal.jpg"
+              alt="Decoração de Natal"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </div>
         </div>
       </section>
 
@@ -387,7 +484,7 @@
         </p>
         <div class="credit">
           <a
-            href="https://instagram.com/nascfrontstudio?rpxt=MXN4c2xnbGY3cjh2eg%3D%3D&utm_source=qr"
+            href="#"
             id="nascLink"
             aria-label="Site desenvolvido por NASC Front Studio"
             ><img
