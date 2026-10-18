@@ -12,12 +12,33 @@
 </head>
 <body>
 
-<!-- Cabeçalho e navegação -->
+<!--
+  ESTRUTURA DA PÁGINA (na ordem em que aparece)
+   1. Cabeçalho ............ logo, menu e botão de WhatsApp
+   2. Topo (hero) .......... título, botões e carrossel de fotos
+   3. Natal ................ só aparece com o tema de Natal ligado (THEME no script.js)
+   4. Faixa de benefícios .. faixa amarela com 3 vantagens
+   5. Produtos ............. cards de Brinquedos, Decoração e Plantas
+   6. Localização .......... abas das lojas + mapa do Google
+   7. Eventos .............. orçamento para casamentos e festas
+   8. Diferenciais ......... por que escolher a PH
+   9. Perguntas frequentes . FAQ
+  10. Chamada final ........ último botão de WhatsApp
+  11. Rodapé ............... logo, copyright e crédito NASC
+  12. Botão flutuante ...... WhatsApp fixo no canto da tela
+  (A janela "Com qual loja você quer falar?" é criada pelo script.js)
+-->
+
+
+<!-- ============================================================
+     1 · CABEÇALHO (logo, menu e botão de WhatsApp)
+     ============================================================ -->
 <header>
   <div class="wrap nav">
     <a href="#topo" class="logo"><img src="assets/logo-ph.webp" alt="Logomarca PH Variedades" width="46" height="46"><span>PH Variedades</span></a>
     <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
-    <nav class="menu" id="menu">
+    <!-- Menu de navegação (no celular abre pelo botão ☰) -->
+<nav class="menu" id="menu">
       <a href="#categorias">Produtos</a>
       <a class="only-natal" href="#natal">Natal</a>
       <a href="#eventos">Eventos</a>
@@ -29,8 +50,11 @@
 </header>
 
 <!-- Conteúdo principal da página -->
+
 <main id="topo">
-<!-- Seção: apresentação principal -->
+<!-- ============================================================
+     2 · TOPO / HERO (título, botões e carrossel de fotos)
+     ============================================================ -->
 <section class="hero">
   <div class="wrap grid">
     <div class="reveal">
@@ -47,7 +71,8 @@
         <div><strong>2</strong>lojas em Maceió</div>
       </div>
     </div>
-    <div class="hero-art reveal"><div class="carousel" id="car" role="region" aria-roledescription="carrossel" aria-label="Destaques da PH Variedades">
+    <!-- Carrossel de fotos: troca sozinho; fotos em assets/hero-*.jpg -->
+<div class="hero-art reveal"><div class="carousel" id="car" role="region" aria-roledescription="carrossel" aria-label="Destaques da PH Variedades">
       <div class="media g-toy on"><span class="emo">🧸</span><img class="photo" src="assets/hero-crianca-carrinho.jpg" style="object-position:50% 58%" alt="Criança brincando com um carrinho" loading="lazy" onerror="this.remove()"><span class="cap">Brinquedos que fazem sorrir</span></div>
       <div class="media g-flower"><span class="emo">🌹</span><img class="photo" src="assets/hero-flores.jpg" style="object-position:50% 55%" alt="Arranjo de flores" loading="lazy" onerror="this.remove()"><span class="cap">Flores e arranjos</span></div>
       <div class="media g-plant"><span class="emo">🌿</span><img class="photo" src="assets/hero-plantas.jpg" style="object-position:50% 70%" alt="Jardim vertical e plantas" loading="lazy" onerror="this.remove()"><span class="cap">Plantas e jardim vertical</span></div>
@@ -58,16 +83,38 @@
   </div>
 </section>
 
-<!-- Faixa: benefícios e informações rápidas -->
+<!-- ============================================================
+     3 · NATAL (aparece só com THEME = "natal" no script.js)
+     ============================================================ -->
+<section class="kids natal-sec only-natal" id="natal">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="tag">🎄 Natal PH</span>
+      <h2>Monte o Natal dos seus sonhos</h2>
+      <p class="lead">Árvores montadas e sob medida, flores e arranjos natalinos, enfeites e brinquedos para colocar embaixo da árvore. Tudo para deixar a casa e a família em clima de festa.</p>
+      <div><span class="count" id="count">🎅 Contagem para o Natal</span></div>
+      <div class="chips"><span>🎄 Árvores montadas</span><span>✨ Enfeites e decoração</span><span>🎁 Presentes para todas as idades</span></div>
+      <a class="btn btn-yellow" data-wa="Olá! Quero ver as novidades de Natal da PH Variedades." href="#">Ver ofertas de Natal</a>
+    </div>
+    <div class="media g-blue reveal"><span class="emo">🎄</span><img class="photo" src="assets/natal.jpg" alt="Decoração de Natal" loading="lazy" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4 · FAIXA DE BENEFÍCIOS
+     ============================================================ -->
 <div class="strip"><div class="wrap"><span>📦 Compre sem sair de casa</span><span class="only-natal">🎅 Enfeites, árvores e presentes de Natal</span><span>📍 Centro e Maceió Shopping</span><span>✅ Orçamento sem compromisso</span></div></div>
 
-<!-- Seção: categorias de produtos -->
+<!-- ============================================================
+     5 · PRODUTOS (cards de categorias)
+     ============================================================ -->
 <section id="categorias">
   <div class="wrap center">
     <span class="tag">O que você encontra</span>
     <h2>Tudo para <span class="script">presentear e decorar</span></h2>
     <p class="lead">Do brinquedo que faz a criança sorrir ao arranjo que transforma sua casa ou seu evento.</p>
     <div class="cards" style="text-align:left">
+      <!-- Card 1 · Brinquedos -->
       <article class="card reveal">
         <div class="media g-toy"><span class="emo">🚗</span><img class="photo" src="assets/brinquedos.jpg" alt="Brinquedos" loading="lazy" onerror="this.remove()"></div>
         <div class="body">
@@ -77,6 +124,7 @@
           <a class="btn btn-wa" data-wa="Olá! Quero ver os brinquedos da PH Variedades." href="#">Quero ver brinquedos</a>
         </div>
       </article>
+      <!-- Card 2 · Decoração e flores -->
       <article class="card reveal">
         <div class="media g-flower"><span class="emo">💐</span><img class="photo" src="assets/decoracao.jpg" alt="Decoração e arranjos de flores" loading="lazy" onerror="this.remove()"></div>
         <div class="body">
@@ -86,6 +134,7 @@
           <a class="btn btn-wa" data-wa="Olá! Quero ver os arranjos e decoração da PH Variedades." href="#">Quero ver decoração</a>
         </div>
       </article>
+      <!-- Card 3 · Plantas e jardim vertical -->
       <article class="card reveal">
         <div class="media g-plant"><span class="emo">🌳</span><img class="photo" src="assets/plantas.jpg" alt="Árvores montadas e jardim vertical" loading="lazy" onerror="this.remove()"></div>
         <div class="body">
@@ -99,13 +148,16 @@
   </div>
 </section>
 
-<!-- Seção: localização das lojas -->
+<!-- ============================================================
+     6 · LOCALIZAÇÃO (abas das lojas + mapa do Google)
+     ============================================================ -->
 <section class="loc" id="localizacao">
   <div class="wrap center">
     <span class="tag">📍 Venha nos visitar</span>
     <h2>Encontre a <span class="script">PH mais perto de você</span></h2>
     <p class="lead">Duas lojas em Maceió. Escolha a unidade, veja no mapa e chegue fácil.</p>
-    <div class="loc-grid" style="text-align:left">
+    <!-- Esquerda: abas e dados da loja · Direita: mapa (ou cartão "Abrir no Google Maps" se o mapa for bloqueado) -->
+<div class="loc-grid" style="text-align:left">
       <div class="loc-info reveal">
         <div class="loc-tabs" role="tablist">
           <button class="loc-tab on" role="tab" aria-selected="true" data-store="centro">Centro</button>
@@ -127,22 +179,9 @@
   </div>
 </section>
 
-<!-- Seção: ofertas especiais de Natal -->
-<section class="kids natal-sec only-natal" id="natal">
-  <div class="wrap grid">
-    <div class="reveal">
-      <span class="tag">🎄 Natal PH</span>
-      <h2>Monte o Natal dos seus sonhos</h2>
-      <p class="lead">Árvores montadas e sob medida, flores e arranjos natalinos, enfeites e brinquedos para colocar embaixo da árvore. Tudo para deixar a casa e a família em clima de festa.</p>
-      <div><span class="count" id="count">🎅 Contagem para o Natal</span></div>
-      <div class="chips"><span>🎄 Árvores montadas</span><span>✨ Enfeites e decoração</span><span>🎁 Presentes para todas as idades</span></div>
-      <a class="btn btn-yellow" data-wa="Olá! Quero ver as novidades de Natal da PH Variedades." href="#">Ver ofertas de Natal</a>
-    </div>
-    <div class="media g-blue reveal"><span class="emo">🎄</span><img class="photo" src="assets/natal.jpg" alt="Decoração de Natal" loading="lazy" onerror="this.remove()"></div>
-  </div>
-</section>
-
-<!-- Seção: decoração para eventos -->
+<!-- ============================================================
+     7 · EVENTOS E CASAMENTOS (passo a passo do orçamento)
+     ============================================================ -->
 <section class="events" id="eventos">
   <div class="wrap center">
     <span class="tag">Eventos e casamentos</span>
@@ -158,7 +197,9 @@
   </div>
 </section>
 
-<!-- Seção: motivos para escolher a PH -->
+<!-- ============================================================
+     8 · DIFERENCIAIS (por que escolher a PH)
+     ============================================================ -->
 <section>
   <div class="wrap center">
     <span class="tag">Por que a PH</span>
@@ -172,7 +213,9 @@
   </div>
 </section>
 
-<!-- Seção: perguntas frequentes -->
+<!-- ============================================================
+     9 · PERGUNTAS FREQUENTES (FAQ)
+     ============================================================ -->
 <section id="faq" style="padding-top:0">
   <div class="wrap">
     <h2 class="center">Perguntas frequentes</h2>
@@ -185,7 +228,9 @@
   </div>
 </section>
 
-<!-- Seção: chamada final para contato -->
+<!-- ============================================================
+     10 · CHAMADA FINAL (último botão de WhatsApp)
+     ============================================================ -->
 <section class="final">
   <div class="wrap">
     <h2>Pronto para encontrar o presente perfeito?</h2>
@@ -193,9 +238,12 @@
     <a class="btn btn-wa" data-wa="Olá! Quero atendimento da PH Variedades." href="#">💬 Falar no WhatsApp agora</a>
   </div>
 </section>
+<!-- Fim do conteúdo principal -->
 </main>
 
-<!-- Rodapé e informações institucionais -->
+<!-- ============================================================
+     11 · RODAPÉ (logo, copyright e crédito NASC Front Studio)
+     ============================================================ -->
 <footer>
   <div class="wrap">
     <p><img src="assets/logo-ph.webp" alt="PH Variedades" width="56" height="56" style="border-radius:50%;display:block;margin:0 auto 10px"></p>
@@ -204,10 +252,14 @@
   </div>
 </footer>
 
-<!-- Atalho flutuante para o WhatsApp -->
+<!-- ============================================================
+     12 · BOTÃO FLUTUANTE DE WHATSAPP (fixo no canto da tela)
+     ============================================================ -->
 <a class="fab" data-wa="Olá! Vim pelo site da PH Variedades." href="#" aria-label="WhatsApp">💬</a>
 
-<!-- Arquivo de interações da página -->
+<!-- ============================================================
+     SCRIPT (funções, tema de Natal, seletor de loja, mapa e carrossel)
+     ============================================================ -->
 <script src="script.js" defer></script>
 </body>
 </html>
