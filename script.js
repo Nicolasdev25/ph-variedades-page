@@ -35,14 +35,14 @@ if (NASC_URL) {
   nl.removeAttribute("href");
   nl.style.cursor = "default";
 }
-// Troque pelos números reais das lojas (DDI+DDD+número, só dígitos). E
+// Troque pelos números reais das lojas (DDI+DDD+número, só dígitos).
 const STORES = [
   {
     id: "centro",
     name: "Unidade Centro",
     addr: "Rua do Comércio, 416 – Centro",
     hours: "08:00 às 18:00",
-    phone: "5582000000000",
+    phone: "5582982036966",
     q: "Rua do Comércio, 416, Centro, Maceió - AL",
   },
   {
@@ -50,7 +50,7 @@ const STORES = [
     name: "Unidade Maceió Shopping",
     addr: "Maceió Shopping",
     hours: "09:00 às 22:00",
-    phone: "5582000000001",
+    phone: "5582982036966",
     q: "Maceió Shopping, Maceió - AL",
   },
 ];

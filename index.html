@@ -1,18 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PH Variedades | Brinquedos, Decoração e Plantas em Maceió</title>
-<meta name="description" content="20 anos de qualidade e confiança. Brinquedos, decoração, flores, árvores montadas e jardim vertical. Centro e Maceió Shopping.">
-<link rel="icon" href="assets/logo-ph.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>PH Variedades | Brinquedos, Decoração e Plantas em Maceió</title>
+    <meta
+      name="description"
+      content="20 anos de qualidade e confiança. Brinquedos, decoração, flores, árvores montadas e jardim vertical. Centro e Maceió Shopping."
+    />
+    <link rel="icon" href="assets/logo-ph.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
   ESTRUTURA DA PÁGINA (na ordem em que aparece)
    1. Cabeçalho ............ logo, menu e botão de WhatsApp
    2. Topo (hero) .......... título, botões e carrossel de fotos
@@ -29,237 +37,556 @@
   (A janela "Com qual loja você quer falar?" é criada pelo script.js)
 -->
 
-
-<!-- ============================================================
+    <!-- ============================================================
      1 · CABEÇALHO (logo, menu e botão de WhatsApp)
      ============================================================ -->
-<header>
-  <div class="wrap nav">
-    <a href="#topo" class="logo"><img src="assets/logo-ph.webp" alt="Logomarca PH Variedades" width="46" height="46"><span>PH Variedades</span></a>
-    <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
-    <!-- Menu de navegação (no celular abre pelo botão ☰) -->
-<nav class="menu" id="menu">
-      <a href="#categorias">Produtos</a>
-      <a class="only-natal" href="#natal">Natal</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#localizacao">Localização</a>
-      <a href="#faq">Dúvidas</a>
-      <a class="btn btn-wa" data-wa="Olá! Vim pelo site da PH Variedades." href="#">Chamar no WhatsApp</a>
-    </nav>
-  </div>
-</header>
+    <header>
+      <div class="wrap nav">
+        <a href="#topo" class="logo"
+          ><img
+            src="assets/logo-ph-natal.jpeg"
+            alt="Logomarca PH Variedades"
+            width="46"
+            height="46"
+          /><span>PH Variedades</span></a
+        >
+        <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
+        <!-- Menu de navegação (no celular abre pelo botão ☰) -->
+        <nav class="menu" id="menu">
+          <a href="#categorias">Produtos</a>
+          <a class="only-natal" href="#natal">Natal</a>
+          <a href="#eventos">Eventos</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#faq">Dúvidas</a>
+          <a
+            class="btn btn-wa"
+            data-wa="Olá! Vim pelo site da PH Variedades."
+            href="#"
+            >Chamar no WhatsApp</a
+          >
+        </nav>
+      </div>
+    </header>
 
-<!-- Conteúdo principal da página -->
+    <!-- Conteúdo principal da página -->
 
-<main id="topo">
-<!-- ============================================================
+    <main id="topo">
+      <!-- ============================================================
      2 · TOPO / HERO (título, botões e carrossel de fotos)
      ============================================================ -->
-<section class="hero">
-  <div class="wrap grid">
-    <div class="reveal">
-      <img class="hero-logo" src="assets/logo-ph.webp" alt="PH Variedades" width="110" height="110"><br><span class="tag">🏆 20 anos de qualidade e confiança</span> <span class="tag only-natal">🎄 Natal 2026</span>
-      <h1><span class="not-natal">Brinquedos, decoração e plantas <em>num só lugar</em></span><span class="only-natal">Seu Natal mais <em>mágico</em> começa na PH</span></h1>
-      <p><span class="not-natal">Encontre presentes, flores, árvores montadas e jardim vertical em Maceió. Peça pelo WhatsApp e compre sem sair de casa.</span><span class="only-natal">Árvores montadas, enfeites, decoração natalina e presentes para toda a família. Peça pelo WhatsApp e receba sem sair de casa.</span></p>
-      <div class="cta-row">
-        <a class="btn btn-wa" data-wa="Olá! Quero fazer um pedido na PH Variedades." href="#">💬 Pedir pelo WhatsApp</a>
-        <a class="btn btn-ghost" href="#categorias">Ver produtos</a>
-      </div>
-      <div class="proof">
-        <div><strong>20+</strong>anos de história</div>
-        <div><strong>77 mil</strong>seguidores</div>
-        <div><strong>2</strong>lojas em Maceió</div>
-      </div>
-    </div>
-    <!-- Carrossel de fotos: troca sozinho; fotos em assets/hero-*.jpg -->
-<div class="hero-art reveal"><div class="carousel" id="car" role="region" aria-roledescription="carrossel" aria-label="Destaques da PH Variedades">
-      <div class="media g-toy on"><span class="emo">🧸</span><img class="photo" src="assets/hero-crianca-carrinho.jpg" style="object-position:50% 58%" alt="Criança brincando com um carrinho" loading="lazy" onerror="this.remove()"><span class="cap">Brinquedos que fazem sorrir</span></div>
-      <div class="media g-flower"><span class="emo">🌹</span><img class="photo" src="assets/hero-flores.jpg" style="object-position:50% 55%" alt="Arranjo de flores" loading="lazy" onerror="this.remove()"><span class="cap">Flores e arranjos</span></div>
-      <div class="media g-plant"><span class="emo">🌿</span><img class="photo" src="assets/hero-plantas.jpg" style="object-position:50% 70%" alt="Jardim vertical e plantas" loading="lazy" onerror="this.remove()"><span class="cap">Plantas e jardim vertical</span></div>
-      <div class="media g-blue"><span class="emo">🎁</span><img class="photo" src="assets/hero-presentes.jpg" style="object-position:50% 60%" alt="Presentes" loading="lazy" onerror="this.remove()"><span class="cap">Presentes para todos</span></div>
-<button class="car-btn prev" aria-label="Foto anterior">‹</button><button class="car-btn next" aria-label="Próxima foto">›</button><div class="car-dots"></div>
-</div>
-    </div>
-  </div>
-</section>
+      <section class="hero">
+        <div class="wrap grid">
+          <div class="reveal">
+            <img
+              class="hero-logo"
+              src="assets/logo-ph-natal.jpeg"
+              alt="PH Variedades"
+              width="110"
+              height="110"
+            /><br /><span class="tag">🏆 20 anos de qualidade e confiança</span>
+            <span class="tag only-natal">🎄 Natal 2026</span>
+            <h1>
+              <span class="not-natal"
+                >Brinquedos, decoração e plantas <em>num só lugar</em></span
+              ><span class="only-natal"
+                >Seu Natal mais <em>mágico</em> começa na PH</span
+              >
+            </h1>
+            <p>
+              <span class="not-natal"
+                >Encontre presentes, flores, árvores montadas e jardim vertical
+                em Maceió. Peça pelo WhatsApp e compre sem sair de casa.</span
+              ><span class="only-natal"
+                >Árvores montadas, enfeites, decoração natalina e presentes para
+                toda a família. Peça pelo WhatsApp e receba sem sair de
+                casa.</span
+              >
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-wa"
+                data-wa="Olá! Quero fazer um pedido na PH Variedades."
+                href="#"
+                >💬 Pedir pelo WhatsApp</a
+              >
+              <a class="btn btn-ghost" href="#categorias">Ver produtos</a>
+            </div>
+            <div class="proof">
+              <div><strong>20+</strong>anos de história</div>
+              <div><strong>77 mil</strong>seguidores</div>
+              <div><strong>2</strong>lojas em Maceió</div>
+            </div>
+          </div>
+          <!-- Carrossel de fotos: troca sozinho; fotos em assets/hero-*.jpg -->
+          <div class="hero-art reveal">
+            <div
+              class="carousel"
+              id="car"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Destaques da PH Variedades"
+            >
+              <div class="media g-toy on">
+                <span class="emo">🧸</span
+                ><img
+                  class="photo"
+                  src="assets/hero-crianca-carrinho.jpg"
+                  style="object-position: 50% 58%"
+                  alt="Criança brincando com um carrinho"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Brinquedos que fazem sorrir</span>
+              </div>
+              <div class="media g-flower">
+                <span class="emo">🌹</span
+                ><img
+                  class="photo"
+                  src="assets/hero-flores.jpg"
+                  style="object-position: 50% 55%"
+                  alt="Arranjo de flores"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Flores e arranjos</span>
+              </div>
+              <div class="media g-plant">
+                <span class="emo">🌿</span
+                ><img
+                  class="photo"
+                  src="assets/hero-plantas.jpg"
+                  style="object-position: 50% 70%"
+                  alt="Jardim vertical e plantas"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Plantas e jardim vertical</span>
+              </div>
+              <div class="media g-blue">
+                <span class="emo">🎁</span
+                ><img
+                  class="photo"
+                  src="assets/hero-presentes.jpg"
+                  style="object-position: 50% 60%"
+                  alt="Presentes"
+                  loading="lazy"
+                  onerror="this.remove()"
+                /><span class="cap">Presentes para todos</span>
+              </div>
+              <button class="car-btn prev" aria-label="Foto anterior">‹</button
+              ><button class="car-btn next" aria-label="Próxima foto">›</button>
+              <div class="car-dots"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      3 · NATAL (aparece só com THEME = "natal" no script.js)
      ============================================================ -->
-<section class="kids natal-sec only-natal" id="natal">
-  <div class="wrap grid">
-    <div class="reveal">
-      <span class="tag">🎄 Natal PH</span>
-      <h2>Monte o Natal dos seus sonhos</h2>
-      <p class="lead">Árvores montadas e sob medida, flores e arranjos natalinos, enfeites e brinquedos para colocar embaixo da árvore. Tudo para deixar a casa e a família em clima de festa.</p>
-      <div><span class="count" id="count">🎅 Contagem para o Natal</span></div>
-      <div class="chips"><span>🎄 Árvores montadas</span><span>✨ Enfeites e decoração</span><span>🎁 Presentes para todas as idades</span></div>
-      <a class="btn btn-yellow" data-wa="Olá! Quero ver as novidades de Natal da PH Variedades." href="#">Ver ofertas de Natal</a>
-    </div>
-    <div class="media g-blue reveal"><span class="emo">🎄</span><img class="photo" src="assets/natal.jpg" alt="Decoração de Natal" loading="lazy" onerror="this.remove()"></div>
-  </div>
-</section>
+      <section class="kids natal-sec only-natal" id="natal">
+        <div class="wrap grid">
+          <div class="reveal">
+            <span class="tag">🎄 Natal PH</span>
+            <h2>Monte o Natal dos seus sonhos</h2>
+            <p class="lead">
+              Árvores montadas e sob medida, flores e arranjos natalinos,
+              enfeites e brinquedos para colocar embaixo da árvore. Tudo para
+              deixar a casa e a família em clima de festa.
+            </p>
+            <div>
+              <span class="count" id="count">🎅 Contagem para o Natal</span>
+            </div>
+            <div class="chips">
+              <span>🎄 Árvores montadas</span
+              ><span>✨ Enfeites e decoração</span
+              ><span>🎁 Presentes para todas as idades</span>
+            </div>
+            <a
+              class="btn btn-yellow"
+              data-wa="Olá! Quero ver as novidades de Natal da PH Variedades."
+              href="#"
+              >Ver ofertas de Natal</a
+            >
+          </div>
+          <div class="media g-blue reveal">
+            <span class="emo">🎄</span
+            ><img
+              class="photo"
+              src="assets/natal.jpg"
+              alt="Decoração de Natal"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </div>
+        </div>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      4 · FAIXA DE BENEFÍCIOS
      ============================================================ -->
-<div class="strip"><div class="wrap"><span>📦 Compre sem sair de casa</span><span class="only-natal">🎅 Enfeites, árvores e presentes de Natal</span><span>📍 Centro e Maceió Shopping</span><span>✅ Orçamento sem compromisso</span></div></div>
+      <div class="strip">
+        <div class="wrap">
+          <span>📦 Compre sem sair de casa</span
+          ><span class="only-natal"
+            >🎅 Enfeites, árvores e presentes de Natal</span
+          ><span>📍 Centro e Maceió Shopping</span
+          ><span>✅ Orçamento sem compromisso</span>
+        </div>
+      </div>
 
-<!-- ============================================================
+      <!-- ============================================================
      5 · PRODUTOS (cards de categorias)
      ============================================================ -->
-<section id="categorias">
-  <div class="wrap center">
-    <span class="tag">O que você encontra</span>
-    <h2>Tudo para <span class="script">presentear e decorar</span></h2>
-    <p class="lead">Do brinquedo que faz a criança sorrir ao arranjo que transforma sua casa ou seu evento.</p>
-    <div class="cards" style="text-align:left">
-      <!-- Card 1 · Brinquedos -->
-      <article class="card reveal">
-        <div class="media g-toy"><span class="emo">🚗</span><img class="photo" src="assets/brinquedos.jpg" alt="Brinquedos" loading="lazy" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Brinquedos</h3>
-          <p>Carrinhos, bonecas, patins, educativos e muito mais para todas as idades.</p>
-          <ul><li>Opções até R$ 29,99</li><li>Educativos e New Born</li><li>Lançamentos toda semana</li></ul>
-          <a class="btn btn-wa" data-wa="Olá! Quero ver os brinquedos da PH Variedades." href="#">Quero ver brinquedos</a>
+      <section id="categorias">
+        <div class="wrap center">
+          <span class="tag">O que você encontra</span>
+          <h2>Tudo para <span class="script">presentear e decorar</span></h2>
+          <p class="lead">
+            Do brinquedo que faz a criança sorrir ao arranjo que transforma sua
+            casa ou seu evento.
+          </p>
+          <div class="cards" style="text-align: left">
+            <!-- Card 1 · Brinquedos -->
+            <article class="card reveal">
+              <div class="media g-toy">
+                <span class="emo">🚗</span
+                ><img
+                  class="photo"
+                  src="assets/brinquedos.jpg"
+                  alt="Brinquedos"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="body">
+                <h3>Brinquedos</h3>
+                <p>
+                  Carrinhos, bonecas, patins, educativos e muito mais para todas
+                  as idades.
+                </p>
+                <ul>
+                  <li>Opções até R$ 29,99</li>
+                  <li>Educativos e New Born</li>
+                  <li>Lançamentos toda semana</li>
+                </ul>
+                <a
+                  class="btn btn-wa"
+                  data-wa="Olá! Quero ver os brinquedos da PH Variedades."
+                  href="#"
+                  >Quero ver brinquedos</a
+                >
+              </div>
+            </article>
+            <!-- Card 2 · Decoração e flores -->
+            <article class="card reveal">
+              <div class="media g-flower">
+                <span class="emo">💐</span
+                ><img
+                  class="photo"
+                  src="assets/decoracao.jpg"
+                  alt="Decoração e arranjos de flores"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="body">
+                <h3>Decoração e flores</h3>
+                <p>
+                  Arranjos sofisticados, vasos e crucifixos para dar charme e
+                  significado ao seu ambiente.
+                </p>
+                <ul>
+                  <li>Arranjos prontos ou personalizados</li>
+                  <li>Vasos e peças decorativas</li>
+                  <li>Presentes que ficam no coração</li>
+                </ul>
+                <a
+                  class="btn btn-wa"
+                  data-wa="Olá! Quero ver os arranjos e decoração da PH Variedades."
+                  href="#"
+                  >Quero ver decoração</a
+                >
+              </div>
+            </article>
+            <!-- Card 3 · Plantas e jardim vertical -->
+            <article class="card reveal">
+              <div class="media g-plant">
+                <span class="emo">🌳</span
+                ><img
+                  class="photo"
+                  src="assets/plantas.jpg"
+                  alt="Árvores montadas e jardim vertical"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="body">
+                <h3>Plantas e jardim vertical</h3>
+                <p>
+                  Árvores montadas, sob medida, e jardins verticais para deixar
+                  tudo mais verde e aconchegante.
+                </p>
+                <ul>
+                  <li>Árvores montadas e sob medida</li>
+                  <li>Jardim vertical</li>
+                  <li>Orçamento sem compromisso</li>
+                </ul>
+                <a
+                  class="btn btn-wa"
+                  data-wa="Olá! Quero um orçamento de árvores e jardim vertical."
+                  href="#"
+                  >Pedir orçamento</a
+                >
+              </div>
+            </article>
+          </div>
         </div>
-      </article>
-      <!-- Card 2 · Decoração e flores -->
-      <article class="card reveal">
-        <div class="media g-flower"><span class="emo">💐</span><img class="photo" src="assets/decoracao.jpg" alt="Decoração e arranjos de flores" loading="lazy" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Decoração e flores</h3>
-          <p>Arranjos sofisticados, vasos e crucifixos para dar charme e significado ao seu ambiente.</p>
-          <ul><li>Arranjos prontos ou personalizados</li><li>Vasos e peças decorativas</li><li>Presentes que ficam no coração</li></ul>
-          <a class="btn btn-wa" data-wa="Olá! Quero ver os arranjos e decoração da PH Variedades." href="#">Quero ver decoração</a>
-        </div>
-      </article>
-      <!-- Card 3 · Plantas e jardim vertical -->
-      <article class="card reveal">
-        <div class="media g-plant"><span class="emo">🌳</span><img class="photo" src="assets/plantas.jpg" alt="Árvores montadas e jardim vertical" loading="lazy" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Plantas e jardim vertical</h3>
-          <p>Árvores montadas, sob medida, e jardins verticais para deixar tudo mais verde e aconchegante.</p>
-          <ul><li>Árvores montadas e sob medida</li><li>Jardim vertical</li><li>Orçamento sem compromisso</li></ul>
-          <a class="btn btn-wa" data-wa="Olá! Quero um orçamento de árvores e jardim vertical." href="#">Pedir orçamento</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      6 · LOCALIZAÇÃO (abas das lojas + mapa do Google)
      ============================================================ -->
-<section class="loc" id="localizacao">
-  <div class="wrap center">
-    <span class="tag">📍 Venha nos visitar</span>
-    <h2>Encontre a <span class="script">PH mais perto de você</span></h2>
-    <p class="lead">Duas lojas em Maceió. Escolha a unidade, veja no mapa e chegue fácil.</p>
-    <!-- Esquerda: abas e dados da loja · Direita: mapa (ou cartão "Abrir no Google Maps" se o mapa for bloqueado) -->
-<div class="loc-grid" style="text-align:left">
-      <div class="loc-info reveal">
-        <div class="loc-tabs" role="tablist">
-          <button class="loc-tab on" role="tab" aria-selected="true" data-store="centro">Centro</button>
-          <button class="loc-tab" role="tab" aria-selected="false" data-store="shopping">Maceió Shopping</button>
+      <section class="loc" id="localizacao">
+        <div class="wrap center">
+          <span class="tag">📍 Venha nos visitar</span>
+          <h2>Encontre a <span class="script">PH mais perto de você</span></h2>
+          <p class="lead">
+            Duas lojas em Maceió. Escolha a unidade, veja no mapa e chegue
+            fácil.
+          </p>
+          <!-- Esquerda: abas e dados da loja · Direita: mapa (ou cartão "Abrir no Google Maps" se o mapa for bloqueado) -->
+          <div class="loc-grid" style="text-align: left">
+            <div class="loc-info reveal">
+              <div class="loc-tabs" role="tablist">
+                <button
+                  class="loc-tab on"
+                  role="tab"
+                  aria-selected="true"
+                  data-store="centro"
+                >
+                  Centro
+                </button>
+                <button
+                  class="loc-tab"
+                  role="tab"
+                  aria-selected="false"
+                  data-store="shopping"
+                >
+                  Maceió Shopping
+                </button>
+              </div>
+              <h3 id="locName">Unidade Centro</h3>
+              <p id="locAddr">Rua do Comércio, 416 – Centro</p>
+              <p class="loc-hours" id="locHours">🕗 08:00 às 18:00</p>
+              <div class="loc-actions">
+                <a
+                  class="btn btn-yellow"
+                  id="locRoute"
+                  target="_blank"
+                  rel="noopener"
+                  >🧭 Como chegar</a
+                >
+                <a class="btn btn-wa" id="locWa" target="_blank" rel="noopener"
+                  >WhatsApp desta loja</a
+                >
+              </div>
+            </div>
+            <div class="loc-map reveal">
+              <div class="loc-fallback">
+                <div class="pin">📍</div>
+                <b id="locFbName">Unidade Centro</b><span id="locFbAddr"></span
+                ><a
+                  class="btn btn-yellow"
+                  id="locOpen"
+                  target="_blank"
+                  rel="noopener"
+                  >🗺️ Abrir no Google Maps</a
+                >
+              </div>
+              <iframe
+                id="locMap"
+                title="Mapa da loja no Google Maps"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
-        <h3 id="locName">Unidade Centro</h3>
-        <p id="locAddr">Rua do Comércio, 416 – Centro</p>
-        <p class="loc-hours" id="locHours">🕗 08:00 às 18:00</p>
-        <div class="loc-actions">
-          <a class="btn btn-yellow" id="locRoute" target="_blank" rel="noopener">🧭 Como chegar</a>
-          <a class="btn btn-wa" id="locWa" target="_blank" rel="noopener">WhatsApp desta loja</a>
-        </div>
-      </div>
-      <div class="loc-map reveal">
-        <div class="loc-fallback"><div class="pin">📍</div><b id="locFbName">Unidade Centro</b><span id="locFbAddr"></span><a class="btn btn-yellow" id="locOpen" target="_blank" rel="noopener">🗺️ Abrir no Google Maps</a></div>
-        <iframe id="locMap" title="Mapa da loja no Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      7 · EVENTOS E CASAMENTOS (passo a passo do orçamento)
      ============================================================ -->
-<section class="events" id="eventos">
-  <div class="wrap center">
-    <span class="tag">Eventos e casamentos</span>
-    <h2>Transformamos cada momento <span class="script" style="color:var(--yellow)">em algo especial</span></h2>
-    <p class="lead">Arranjos personalizados com beleza, harmonia e encanto em cada detalhe. Deixe a gente cuidar disso para você.</p>
-    <div class="steps" style="text-align:left">
-      <div class="step reveal"><b>1</b>Chame no WhatsApp</div>
-      <div class="step reveal"><b>2</b>Conte sobre seu evento</div>
-      <div class="step reveal"><b>3</b>Receba o orçamento</div>
-      <div class="step reveal"><b>4</b>Aprove e relaxe</div>
-    </div>
-    <p style="margin-top:34px"><a class="btn btn-wa" data-wa="Olá! Quero um orçamento para meu evento." href="#">Solicitar orçamento sem compromisso</a></p>
-  </div>
-</section>
+      <section class="events" id="eventos">
+        <div class="wrap center">
+          <span class="tag">Eventos e casamentos</span>
+          <h2>
+            Transformamos cada momento
+            <span class="script" style="color: var(--yellow)"
+              >em algo especial</span
+            >
+          </h2>
+          <p class="lead">
+            Arranjos personalizados com beleza, harmonia e encanto em cada
+            detalhe. Deixe a gente cuidar disso para você.
+          </p>
+          <div class="steps" style="text-align: left">
+            <div class="step reveal"><b>1</b>Chame no WhatsApp</div>
+            <div class="step reveal"><b>2</b>Conte sobre seu evento</div>
+            <div class="step reveal"><b>3</b>Receba o orçamento</div>
+            <div class="step reveal"><b>4</b>Aprove e relaxe</div>
+          </div>
+          <p style="margin-top: 34px">
+            <a
+              class="btn btn-wa"
+              data-wa="Olá! Quero um orçamento para meu evento."
+              href="#"
+              >Solicitar orçamento sem compromisso</a
+            >
+          </p>
+        </div>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      8 · DIFERENCIAIS (por que escolher a PH)
      ============================================================ -->
-<section>
-  <div class="wrap center">
-    <span class="tag">Por que a PH</span>
-    <h2>Confiança construída em <span class="script">20 anos</span></h2>
-    <div class="why">
-      <div class="reveal"><span>🏆</span><h3>Tradição</h3><p>Duas décadas atendendo Maceió.</p></div>
-      <div class="reveal"><span>🛍️</span><h3>Variedade</h3><p>Brinquedos, decoração e plantas.</p></div>
-      <div class="reveal"><span>📦</span><h3>Praticidade</h3><p>Peça sem sair de casa.</p></div>
-      <div class="reveal"><span>🤝</span><h3>Atendimento</h3><p>Orçamento sem compromisso.</p></div>
-    </div>
-  </div>
-</section>
+      <section>
+        <div class="wrap center">
+          <span class="tag">Por que a PH</span>
+          <h2>Confiança construída em <span class="script">20 anos</span></h2>
+          <div class="why">
+            <div class="reveal">
+              <span>🏆</span>
+              <h3>Tradição</h3>
+              <p>Duas décadas atendendo Maceió.</p>
+            </div>
+            <div class="reveal">
+              <span>🛍️</span>
+              <h3>Variedade</h3>
+              <p>Brinquedos, decoração e plantas.</p>
+            </div>
+            <div class="reveal">
+              <span>📦</span>
+              <h3>Praticidade</h3>
+              <p>Peça sem sair de casa.</p>
+            </div>
+            <div class="reveal">
+              <span>🤝</span>
+              <h3>Atendimento</h3>
+              <p>Orçamento sem compromisso.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      9 · PERGUNTAS FREQUENTES (FAQ)
      ============================================================ -->
-<section id="faq" style="padding-top:0">
-  <div class="wrap">
-    <h2 class="center">Perguntas frequentes</h2>
-    <div class="faq">
-      <details><summary>Posso comprar sem ir à loja?</summary><p>Sim! Chame no WhatsApp, escolha os produtos e combine a entrega.</p></details>
-      <details><summary>Vocês fazem arranjos para eventos?</summary><p>Fazemos arranjos personalizados para casamentos, aniversários e eventos corporativos, com orçamento sem compromisso.</p></details>
-      <details><summary>Trabalham com árvores sob medida?</summary><p>Sim, vendemos árvores montadas e sob medida, além de jardim vertical.</p></details>
-      <details><summary>Qual o horário de atendimento?</summary><p>Centro: 08:00 às 18:00. Maceió Shopping: 09:00 às 22:00.</p></details>
-    </div>
-  </div>
-</section>
+      <section id="faq" style="padding-top: 0">
+        <div class="wrap">
+          <h2 class="center">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Posso comprar sem ir à loja?</summary>
+              <p>
+                Sim! Chame no WhatsApp, escolha os produtos e combine a entrega.
+              </p>
+            </details>
+            <details>
+              <summary>Vocês fazem arranjos para eventos?</summary>
+              <p>
+                Fazemos arranjos personalizados para casamentos, aniversários e
+                eventos corporativos, com orçamento sem compromisso.
+              </p>
+            </details>
+            <details>
+              <summary>Trabalham com árvores sob medida?</summary>
+              <p>
+                Sim, vendemos árvores montadas e sob medida, além de jardim
+                vertical.
+              </p>
+            </details>
+            <details>
+              <summary>Qual o horário de atendimento?</summary>
+              <p>Centro: 08:00 às 18:00. Maceió Shopping: 09:00 às 22:00.</p>
+            </details>
+          </div>
+        </div>
+      </section>
 
-<!-- ============================================================
+      <!-- ============================================================
      10 · CHAMADA FINAL (último botão de WhatsApp)
      ============================================================ -->
-<section class="final">
-  <div class="wrap">
-    <h2>Pronto para encontrar o presente perfeito?</h2>
-    <p class="lead" style="margin-bottom:28px">Fale agora com a PH Variedades e receba atendimento rápido.</p>
-    <a class="btn btn-wa" data-wa="Olá! Quero atendimento da PH Variedades." href="#">💬 Falar no WhatsApp agora</a>
-  </div>
-</section>
-<!-- Fim do conteúdo principal -->
-</main>
+      <section class="final">
+        <div class="wrap">
+          <h2>Pronto para encontrar o presente perfeito?</h2>
+          <p class="lead" style="margin-bottom: 28px">
+            Fale agora com a PH Variedades e receba atendimento rápido.
+          </p>
+          <a
+            class="btn btn-wa"
+            data-wa="Olá! Quero atendimento da PH Variedades."
+            href="#"
+            >💬 Falar no WhatsApp agora</a
+          >
+        </div>
+      </section>
+      <!-- Fim do conteúdo principal -->
+    </main>
 
-<!-- ============================================================
+    <!-- ============================================================
      11 · RODAPÉ (logo, copyright e crédito NASC Front Studio)
      ============================================================ -->
-<footer>
-  <div class="wrap">
-    <p><img src="assets/logo-ph.webp" alt="PH Variedades" width="56" height="56" style="border-radius:50%;display:block;margin:0 auto 10px"></p>
-    <p>© <span id="y"></span> PH Variedades · Maceió/AL · <a href="https://instagram.com/phvariedadesmcz" target="_blank" rel="noopener">@phvariedadesmcz</a></p>
-    <div class="credit"><a href="#" id="nascLink" aria-label="Site desenvolvido por NASC Front Studio"><img src="assets/logo-nasc.webp" alt="NASC Front Studio" height="26"><span>Desenvolvido por <strong>NASC Front Studio</strong></span></a></div>
-  </div>
-</footer>
+    <footer>
+      <div class="wrap">
+        <p>
+          <img
+            src="assets/logo-ph-natal.jpeg"
+            alt="PH Variedades"
+            width="56"
+            height="56"
+            style="border-radius: 50%; display: block; margin: 0 auto 10px"
+          />
+        </p>
+        <p>
+          © <span id="y"></span> PH Variedades · Maceió/AL ·
+          <a
+            href="https://instagram.com/phvariedadesmcz"
+            target="_blank"
+            rel="noopener"
+            >@phvariedadesmcz</a
+          >
+        </p>
+        <div class="credit">
+          <a
+            href="#"
+            id="nascLink"
+            aria-label="Site desenvolvido por NASC Front Studio"
+            ><img
+              src="assets/logo-nasc.webp"
+              alt="NASC Front Studio"
+              height="26"
+            /><span
+              >Desenvolvido por <strong>NASC Front Studio</strong></span
+            ></a
+          >
+        </div>
+      </div>
+    </footer>
 
-<!-- ============================================================
+    <!-- ============================================================
      12 · BOTÃO FLUTUANTE DE WHATSAPP (fixo no canto da tela)
      ============================================================ -->
-<a class="fab" data-wa="Olá! Vim pelo site da PH Variedades." href="#" aria-label="WhatsApp">💬</a>
+    <a
+      class="fab"
+      data-wa="Olá! Vim pelo site da PH Variedades.Gostaria de falar com um Atendente"
+      href="#"
+      aria-label="WhatsApp"
+      >💬</a
+    >
 
-<!-- ============================================================
+    <!-- ============================================================
      SCRIPT (funções, tema de Natal, seletor de loja, mapa e carrossel)
      ============================================================ -->
-<script src="script.js" defer></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
