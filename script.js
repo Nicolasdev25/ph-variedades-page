@@ -1,4 +1,4 @@
-const THEME = "padrao"; // use "padrao" para voltar ao visual original
+const THEME = "natal"; // use "padrao" para voltar ao visual original
 if (THEME === "natal") {
   document.documentElement.classList.add("natal");
   [...document.querySelectorAll(".hero-art .media")].forEach((m, i) => {
