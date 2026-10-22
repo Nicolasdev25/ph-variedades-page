@@ -24,8 +24,8 @@ if (THEME === "natal") {
     }
   }
 }
-// Link do crédito (Instagram/site da NASC).
-const NASC_URL = "";
+
+const NASC_URL = "https://instagram.com/nascfrontstudio";
 const nl = document.getElementById("nascLink");
 if (NASC_URL) {
   nl.href = NASC_URL;
