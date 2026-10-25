@@ -11,10 +11,10 @@
       name="description"
       content="20 anos de qualidade e confiança. Brinquedos, decoração, flores, árvores montadas e jardim vertical. Centro e Maceió Shopping."
     />
-    <link rel="icon" href="assets/logo-ph-natal.jpeg" />
+    <link rel="icon" href="assets/logo-ph.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -24,7 +24,7 @@
   ESTRUTURA DA PÁGINA (na ordem em que aparece)
    1. Cabeçalho ............ logo, menu e botão de WhatsApp
    2. Topo (hero) .......... título, botões e carrossel de fotos
-   3. Natal ................ só aparece com o tema de Natal ligado (THEME no script.js)
+   3. Natal ................ só aparece com o tema de Natal ativo (THEME e NATAL_PERIODO no script.js)
    4. Faixa de benefícios .. faixa amarela com 3 vantagens
    5. Produtos ............. cards de Brinquedos, Decoração e Plantas
    6. Localização .......... abas das lojas + mapa do Google
@@ -44,7 +44,7 @@
       <div class="wrap nav">
         <a href="#topo" class="logo"
           ><img
-            src="assets/logo-ph-natal.jpeg"
+            src="assets/logo-ph.webp"
             alt="Logomarca PH Variedades"
             width="46"
             height="46"
@@ -79,7 +79,7 @@
           <div class="reveal">
             <img
               class="hero-logo"
-              src="assets/logo-ph-natal.jpeg"
+              src="assets/logo-ph.webp"
               alt="PH Variedades"
               width="110"
               height="110"
@@ -89,7 +89,8 @@
               <span class="not-natal"
                 >Brinquedos, decoração e plantas <em>num só lugar</em></span
               ><span class="only-natal"
-                >Seu Natal mais <em>mágico</em> começa na PH</span
+                >A magia do Natal <em>ganha vida</em> na PH Variedades!
+                ✨🎄</span
               >
             </h1>
             <p>
@@ -97,10 +98,15 @@
                 >Encontre presentes, flores, árvores montadas e jardim vertical
                 em Maceió. Peça pelo WhatsApp e compre sem sair de casa.</span
               ><span class="only-natal"
-                >Árvores montadas, enfeites, decoração natalina e presentes para
-                toda a família. Peça pelo WhatsApp e receba sem sair de
-                casa.</span
+                >Transforme cada cantinho em um cenário de encanto, beleza e
+                sofisticação. Aqui, cada detalhe é pensado para tornar o seu
+                Natal inesquecível!</span
               >
+            </p>
+            <!-- Texto menor do Natal (só aparece com o tema de Natal ativo) -->
+            <p class="hero-small only-natal">
+              Árvores natalinas, arranjos exclusivos e decorações que encantam.
+              Escolha seus favoritos e faça seu pedido pelo WhatsApp.
             </p>
             <div class="cta-row">
               <a
@@ -111,10 +117,17 @@
               >
               <a class="btn btn-ghost" href="#categorias">Ver produtos</a>
             </div>
-            <div class="proof">
-              <div><strong>20+</strong>anos de história</div>
-              <div><strong>77 mil</strong>seguidores</div>
-              <div><strong>2</strong>lojas em Maceió</div>
+            <!-- Números de destaque (painel verde-escuro com detalhes dourados) -->
+            <div class="proof" role="list">
+              <div class="proof-item" role="listitem">
+                <strong>20+</strong><span>Anos de tradição</span>
+              </div>
+              <div class="proof-item" role="listitem">
+                <strong>77 mil</strong><span>Pessoas que nos acompanham</span>
+              </div>
+              <div class="proof-item" role="listitem">
+                <strong>02</strong><span>Unidades para receber você</span>
+              </div>
             </div>
           </div>
           <!-- Carrossel de fotos: troca sozinho; fotos em assets/hero-*.jpg -->
@@ -179,7 +192,7 @@
       </section>
 
       <!-- ============================================================
-     3 · NATAL (aparece só com THEME = "natal" no script.js)
+     3 · NATAL (aparece só quando o tema de Natal está ativo: veja THEME e NATAL_PERIODO no script.js)
      ============================================================ -->
       <section class="kids natal-sec only-natal" id="natal">
         <div class="wrap grid">
@@ -258,20 +271,23 @@
               </div>
               <div class="body">
                 <h3>Brinquedos</h3>
+                <p class="card-sub">Um mundo de descobertas</p>
+                <p class="card-tag">Pequenos momentos, grandes alegrias.</p>
                 <p>
-                  Carrinhos, bonecas, patins, educativos e muito mais para todas
-                  as idades.
+                  Uma seleção especial de brinquedos para despertar a
+                  imaginação, estimular descobertas e transformar cada presente
+                  em uma lembrança inesquecível.
                 </p>
                 <ul>
-                  <li>Opções até R$ 29,99</li>
-                  <li>Educativos e New Born</li>
-                  <li>Lançamentos toda semana</li>
+                  <li>Brinquedos para diferentes idades</li>
+                  <li>Opções educativas e interativas</li>
+                  <li>Novidades para surpreender</li>
                 </ul>
                 <a
                   class="btn btn-wa"
-                  data-wa="Olá! Quero ver os brinquedos da PH Variedades."
+                  data-wa="Olá! Quero explorar a coleção de brinquedos da PH Variedades."
                   href="#"
-                  >Quero ver brinquedos</a
+                  >Explore nossa coleção</a
                 >
               </div>
             </article>
@@ -288,21 +304,24 @@
                 />
               </div>
               <div class="body">
-                <h3>Decoração e flores</h3>
+                <h3>Decoração e Flores</h3>
+                <p class="card-sub">Elegância em cada detalhe</p>
+                <p class="card-tag">A beleza que transforma ambientes.</p>
                 <p>
-                  Arranjos sofisticados, vasos e crucifixos para dar charme e
-                  significado ao seu ambiente.
+                  Arranjos florais, vasos e peças decorativas cuidadosamente
+                  selecionados para levar charme, personalidade e sofisticação a
+                  cada espaço.
                 </p>
                 <ul>
-                  <li>Arranjos prontos ou personalizados</li>
+                  <li>Arranjos exclusivos e personalizados</li>
                   <li>Vasos e peças decorativas</li>
-                  <li>Presentes que ficam no coração</li>
+                  <li>Detalhes especiais para presentear</li>
                 </ul>
                 <a
                   class="btn btn-wa"
-                  data-wa="Olá! Quero ver os arranjos e decoração da PH Variedades."
+                  data-wa="Olá! Quero conhecer a coleção de decoração e flores da PH Variedades."
                   href="#"
-                  >Quero ver decoração</a
+                  >Descubra nossa coleção</a
                 >
               </div>
             </article>
@@ -319,21 +338,26 @@
                 />
               </div>
               <div class="body">
-                <h3>Plantas e jardim vertical</h3>
+                <h3>Plantas e Jardins</h3>
+                <p class="card-sub">A natureza como inspiração</p>
+                <p class="card-tag">
+                  Mais vida, beleza e harmonia para seus espaços.
+                </p>
                 <p>
-                  Árvores montadas, sob medida, e jardins verticais para deixar
-                  tudo mais verde e aconchegante.
+                  Projetos de jardins verticais, plantas ornamentais e
+                  composições personalizadas que valorizam ambientes com o
+                  encanto natural do verde.
                 </p>
                 <ul>
-                  <li>Árvores montadas e sob medida</li>
-                  <li>Jardim vertical</li>
-                  <li>Orçamento sem compromisso</li>
+                  <li>Jardins verticais personalizados</li>
+                  <li>Plantas e composições decorativas</li>
+                  <li>Projetos sob medida</li>
                 </ul>
                 <a
                   class="btn btn-wa"
-                  data-wa="Olá! Quero um orçamento de árvores e jardim vertical."
+                  data-wa="Olá! Quero solicitar um projeto de jardim vertical e plantas."
                   href="#"
-                  >Pedir orçamento</a
+                  >Solicite seu projeto</a
                 >
               </div>
             </article>
@@ -540,7 +564,7 @@
       <div class="wrap">
         <p>
           <img
-            src="assets/logo-ph-natal.jpeg"
+            src="assets/logo-ph.webp"
             alt="PH Variedades"
             width="56"
             height="56"
@@ -560,6 +584,8 @@
           <a
             href="https://instagram.com/nascfrontstudio"
             id="nascLink"
+            target="_blank"
+            rel="noopener"
             aria-label="Site desenvolvido por NASC Front Studio"
             ><img
               src="assets/logo-nasc.webp"
@@ -578,7 +604,7 @@
      ============================================================ -->
     <a
       class="fab"
-      data-wa="Olá! Vim pelo site da PH Variedades.Gostaria de falar com um Atendente"
+      data-wa="Olá! Vim pelo site da PH Variedades."
       href="#"
       aria-label="WhatsApp"
       >💬</a
