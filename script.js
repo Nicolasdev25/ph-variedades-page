@@ -1,5 +1,64 @@
-const THEME = "natal"; // use "padrao" para voltar ao visual original
-if (THEME === "natal") {
+// ============================================================
+// ÍNDICE DO JAVASCRIPT
+//  1 · Configuração ........ TEMA, link da NASC e números de WhatsApp (edite aqui)
+//  2 · Tema de Natal ....... neve, emojis e contagem regressiva
+//  3 · Crédito NASC ........ link do rodapé
+//  4 · WhatsApp ............ ícone e botões que abrem o seletor de loja
+//  5 · Menu e rodapé ....... menu do celular e ano do copyright
+//  6 · Animação ao rolar ... efeito "reveal"
+//  7 · Carrossel ........... fotos do topo
+//  8 · Bola de neve ........ segurar e soltar (só no Natal)
+//  9 · Seletor de loja ..... janela "Com qual loja você quer falar?"
+// 10 · Localização ......... abas das lojas e mapa
+// ============================================================
+
+// ============================================================
+// 1 · CONFIGURAÇÃO (o que você mais vai editar)
+// ============================================================
+// Tema de Natal. Opções:
+//   "auto"   -> liga sozinho entre as datas de NATAL_PERIODO e desliga depois (recomendado)
+//   "natal"  -> sempre ligado
+//   "padrao" -> sempre desligado (visual original)
+const THEME = "auto";
+// Período do tema no modo "auto" (formato AAAA-MM-DD; o dia final ainda conta como ligado)
+const NATAL_PERIODO = { inicio: "2026-10-01", fim: "2026-12-26" };
+const NATAL_ATIVO = (() => {
+  if (THEME === "natal") return true;
+  if (THEME !== "auto") return false;
+  const d = new Date(),
+    p = (n) => String(n).padStart(2, "0");
+  const hoje = `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+  return hoje >= NATAL_PERIODO.inicio && hoje <= NATAL_PERIODO.fim;
+})();
+
+// Link do crédito (Instagram/site da NASC). Se deixar "", vale o href do HTML; sem nenhum, o crédito não é clicável.
+const NASC_URL = "https://instagram.com/nascfrontstudio";
+
+// Números de WhatsApp e dados das lojas (DDI+DDD+número, só dígitos). Ex.: 5582999999999
+// q = texto usado para buscar a loja no Google Maps
+const STORES = [
+  {
+    id: "centro",
+    name: "Unidade Centro",
+    addr: "Rua do Comércio, 416 – Centro",
+    hours: "Seg a sex 8h às 18h · Sáb 8h às 14h",
+    phone: "5582000000000",
+    q: "Rua do Comércio, 416, Centro, Maceió - AL",
+  },
+  {
+    id: "shopping",
+    name: "Unidade Maceió Shopping",
+    addr: "Maceió Shopping",
+    hours: "Seg a sáb 9h às 22h · Dom 13h às 21h",
+    phone: "5582000000001",
+    q: "Maceió Shopping, Maceió - AL",
+  },
+];
+
+// ============================================================
+// 2 · TEMA DE NATAL (só roda quando NATAL_ATIVO for verdadeiro, ver bloco 1)
+// ============================================================
+if (NATAL_ATIVO) {
   document.documentElement.classList.add("natal");
   [...document.querySelectorAll(".hero-art .media")].forEach((m, i) => {
     const e = m.querySelector(".emo");
@@ -25,35 +84,23 @@ if (THEME === "natal") {
   }
 }
 
-const NASC_URL = "https://instagram.com/nascfrontstudio";
+// ============================================================
+// 3 · CRÉDITO NASC FRONT STUDIO (rodapé)
+// ============================================================
 const nl = document.getElementById("nascLink");
-if (NASC_URL) {
-  nl.href = NASC_URL;
+const nascAlvo = NASC_URL || nl.getAttribute("href"); // usa o link do script; se estiver vazio, usa o href do HTML
+if (nascAlvo && nascAlvo !== "#") {
+  nl.href = nascAlvo;
   nl.target = "_blank";
   nl.rel = "noopener";
 } else {
   nl.removeAttribute("href");
   nl.style.cursor = "default";
 }
-// Troque pelos números reais das lojas (DDI+DDD+número, só dígitos).
-const STORES = [
-  {
-    id: "centro",
-    name: "Unidade Centro",
-    addr: "Rua do Comércio, 416 – Centro",
-    hours: "08:00 às 18:00",
-    phone: "5582982036966",
-    q: "Rua do Comércio, 416, Centro, Maceió - AL",
-  },
-  {
-    id: "shopping",
-    name: "Unidade Maceió Shopping",
-    addr: "Maceió Shopping",
-    hours: "09:00 às 22:00",
-    phone: "5582982036966",
-    q: "Maceió Shopping, Maceió - AL",
-  },
-];
+
+// ============================================================
+// 4 · WHATSAPP: ícone e botões (todo botão abre o seletor de loja)
+// ============================================================
 const WA_SVG =
   '<svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>';
 document.querySelectorAll("[data-wa]").forEach((a) => {
@@ -69,6 +116,10 @@ document.querySelectorAll("[data-wa]").forEach((a) => {
     openChooser(a.dataset.wa);
   });
 });
+
+// ============================================================
+// 5 · MENU DO CELULAR E ANO DO RODAPÉ
+// ============================================================
 const menu = document.getElementById("menu"),
   burger = document.getElementById("burger");
 burger.addEventListener("click", () => menu.classList.toggle("open"));
@@ -78,6 +129,10 @@ menu
     a.addEventListener("click", () => menu.classList.remove("open")),
   );
 document.getElementById("y").textContent = new Date().getFullYear();
+
+// ============================================================
+// 6 · ANIMAÇÃO AO ROLAR A PÁGINA (reveal)
+// ============================================================
 const io = new IntersectionObserver(
   (es) =>
     es.forEach((e) => {
@@ -90,6 +145,9 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
+// ============================================================
+// 7 · CARROSSEL DE FOTOS DO TOPO (troca sozinho, setas, bolinhas e deslizar)
+// ============================================================
 (function () {
   const c = document.getElementById("car");
   if (!c) return;
@@ -148,8 +206,10 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   play();
 })();
 
-/* Natal: segure (mouse ou dedo) para criar uma bola de neve; solte para jogá-la */
-if (THEME === "natal")
+// ============================================================
+// 8 · BOLA DE NEVE: segurar (mouse ou dedo) para criar, soltar para jogar (só no Natal)
+// ============================================================
+if (NATAL_ATIVO)
   (function () {
     const MAX = 150;
     let ball = null,
@@ -264,7 +324,9 @@ if (THEME === "natal")
     }, 2500);
   })();
 
-/* Escolha da loja: todo botão de WhatsApp abre este seletor */
+// ============================================================
+// 9 · SELETOR DE LOJA: janela "Com qual loja você quer falar?"
+// ============================================================
 function openChooser(msg) {
   let m = document.getElementById("waModal");
   if (!m) {
@@ -308,19 +370,20 @@ function closeChooser() {
   if (window._waLast && window._waLast.focus) window._waLast.focus();
 }
 
-/* Localização: abas por loja + mapa do Google */
+// ============================================================
+// 10 · LOCALIZAÇÃO: abas por loja + mapa do Google (com cartão de reserva)
+// ============================================================
 (function () {
   const sec = document.getElementById("localizacao");
   if (!sec) return;
   const $ = (id) => document.getElementById(id),
     tabs = [...sec.querySelectorAll(".loc-tab")];
-  $("locWa").innerHTML = WA_SVG + "WhatsApp desta loja";
+  $("locWa").innerHTML = WA_SVG + "Fale com nossa equipe";
   // Se o ambiente bloquear o mapa incorporado, mostra o cartão com o botão "Abrir no Google Maps"
   document.addEventListener("securitypolicyviolation", (e) => {
     if (String(e.blockedURI).includes("google.com"))
       $("locMap").style.display = "none";
   });
-
   function show(id) {
     const s = STORES.find((x) => x.id === id),
       q = encodeURIComponent(s.q);
