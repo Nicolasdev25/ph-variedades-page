@@ -693,12 +693,35 @@ details .faq-note {
    12 · CHAMADA FINAL
    ============================================================ */
 .final {
-  background: linear-gradient(135deg, var(--navy-d), var(--blue));
+  background: linear-gradient(135deg, #05281a, #0f4a24);
   color: #fff;
   text-align: center;
 }
+.final h2 {
+  max-width: 820px;
+  margin: 0 auto 14px;
+}
+.final h2 .script {
+  color: #d8b86a;
+}
 .final .lead {
-  color: #d6e1fb;
+  color: #d4efdc;
+  margin-inline: auto;
+}
+.final-sign {
+  margin-top: 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #d8b86a;
+}
+.final-cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 /* ============================================================
    13 · RODAPÉ E CRÉDITO NASC FRONT STUDIO
@@ -1216,7 +1239,7 @@ html.natal {
     linear-gradient(135deg, #5e0a1a, #9b1028);
 }
 .natal .final {
-  background: linear-gradient(135deg, #0f4a24, #9b1028);
+  background: linear-gradient(135deg, #05281a, #0f4a24);
 }
 .natal .script {
   color: #c8102e;
