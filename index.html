@@ -153,7 +153,11 @@
                 <img
                   class="photo"
                   src="assets/c-2.jpeg"
-                  style="object-position: 50% 50%"
+                  style="
+                    object-position: 50% 0%;
+                    transform: scale(1.12);
+                    transform-origin: 50% 0%;
+                  "
                   alt="Guirlanda de Natal com laço dourado e pinhas"
                   loading="lazy"
                   onerror="this.remove()"
@@ -172,7 +176,7 @@
               <div class="media g-plant">
                 <img
                   class="photo"
-                  src="assets/c-4.jpeg"
+                  src="assets/c-5.jpeg"
                   style="object-position: 50% 35%"
                   alt="Jardim vertical em varanda de apartamento"
                   loading="lazy"
@@ -182,7 +186,7 @@
               <div class="media g-plant">
                 <img
                   class="photo"
-                  src="assets/c-5.jpeg"
+                  src="assets/c-4.jpeg"
                   style="object-position: 50% 25%"
                   alt="Casinha Mágica, casinha de brinquedo colorida"
                   loading="lazy"
@@ -265,15 +269,38 @@
           <div class="cards" style="text-align: left">
             <!-- Card 1 · Brinquedos -->
             <article class="card reveal">
-              <div class="media g-toy">
-                <span class="emo">🚗</span
-                ><img
-                  class="photo"
-                  src="assets/brinquedos.jpg"
-                  alt="Brinquedos"
-                  loading="lazy"
-                  onerror="this.remove()"
-                />
+              <div
+                class="carousel card-car"
+                role="region"
+                aria-roledescription="carrossel"
+                aria-label="Fotos de Brinquedos"
+              >
+                <div class="media g-toy on">
+                  <span class="emo">🚗</span
+                  ><img
+                    class="photo"
+                    src="assets/brinquedos.jpg"
+                    alt="Brinquedos"
+                    loading="lazy"
+                    onerror="this.remove()"
+                  />
+                </div>
+                <div class="media g-toy">
+                  <img
+                    class="photo"
+                    src="assets/c-4.jpeg"
+                    style="object-position: 50% 25%"
+                    alt="Casinha Mágica, casinha de brinquedo colorida"
+                    loading="lazy"
+                    onerror="this.remove()"
+                  />
+                </div>
+                <button class="car-btn prev" aria-label="Foto anterior">
+                  ‹</button
+                ><button class="car-btn next" aria-label="Próxima foto">
+                  ›
+                </button>
+                <div class="car-dots"></div>
               </div>
               <div class="body">
                 <h3>Brinquedos</h3>
@@ -299,15 +326,38 @@
             </article>
             <!-- Card 2 · Decoração e flores -->
             <article class="card reveal">
-              <div class="media g-flower">
-                <span class="emo">💐</span
-                ><img
-                  class="photo"
-                  src="assets/decoracao.jpg"
-                  alt="Decoração e arranjos de flores"
-                  loading="lazy"
-                  onerror="this.remove()"
-                />
+              <div
+                class="carousel card-car"
+                role="region"
+                aria-roledescription="carrossel"
+                aria-label="Fotos de Decoração e arranjos de flores"
+              >
+                <div class="media g-flower on">
+                  <span class="emo">💐</span
+                  ><img
+                    class="photo"
+                    src="assets/decoracao.jpg"
+                    alt="Decoração e arranjos de flores"
+                    loading="lazy"
+                    onerror="this.remove()"
+                  />
+                </div>
+                <div class="media g-flower">
+                  <img
+                    class="photo"
+                    src="assets/c-3.jpeg"
+                    style="object-position: 50% 40%"
+                    alt="Árvore decorativa de flores rosas em vaso rústico"
+                    loading="lazy"
+                    onerror="this.remove()"
+                  />
+                </div>
+                <button class="car-btn prev" aria-label="Foto anterior">
+                  ‹</button
+                ><button class="car-btn next" aria-label="Próxima foto">
+                  ›
+                </button>
+                <div class="car-dots"></div>
               </div>
               <div class="body">
                 <h3>Decoração e Flores</h3>
@@ -333,15 +383,38 @@
             </article>
             <!-- Card 3 · Plantas e jardim vertical -->
             <article class="card reveal">
-              <div class="media g-plant">
-                <span class="emo">🌳</span
-                ><img
-                  class="photo"
-                  src="assets/plantas.jpg"
-                  alt="Árvores montadas e jardim vertical"
-                  loading="lazy"
-                  onerror="this.remove()"
-                />
+              <div
+                class="carousel card-car"
+                role="region"
+                aria-roledescription="carrossel"
+                aria-label="Fotos de Árvores montadas e jardim vertical"
+              >
+                <div class="media g-plant on">
+                  <span class="emo">🌳</span
+                  ><img
+                    class="photo"
+                    src="assets/plantas.jpg"
+                    alt="Árvores montadas e jardim vertical"
+                    loading="lazy"
+                    onerror="this.remove()"
+                  />
+                </div>
+                <div class="media g-plant">
+                  <img
+                    class="photo"
+                    src="assets/c-5.jpeg"
+                    style="object-position: 50% 35%"
+                    alt="Jardim vertical em varanda de apartamento"
+                    loading="lazy"
+                    onerror="this.remove()"
+                  />
+                </div>
+                <button class="car-btn prev" aria-label="Foto anterior">
+                  ‹</button
+                ><button class="car-btn next" aria-label="Próxima foto">
+                  ›
+                </button>
+                <div class="car-dots"></div>
               </div>
               <div class="body">
                 <h3>Plantas e Jardins</h3>

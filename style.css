@@ -832,12 +832,14 @@ footer a {
 }
 .carousel {
   position: relative;
+  touch-action: pan-y;
+}
+.hero-art .carousel {
   width: min(100%, 460px);
   margin-inline: auto;
   aspect-ratio: 4/5;
   border-radius: var(--r);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  touch-action: pan-y;
 }
 .carousel .media {
   position: absolute;
@@ -920,10 +922,36 @@ footer a {
   border-radius: 99px;
 }
 @media (max-width: 820px) {
-  .carousel {
+  .hero-art .carousel {
     aspect-ratio: 1/1;
     width: 100%;
   }
+}
+/* Carrossel dentro dos cards de produtos (mesmo componente do topo, em tamanho menor) */
+.card .carousel {
+  height: 230px;
+  overflow: hidden;
+}
+.card .carousel .media {
+  border-radius: 0;
+}
+.card .car-btn {
+  width: 34px;
+  height: 34px;
+  font-size: 1.3rem;
+}
+.card .car-btn.prev {
+  left: 8px;
+}
+.card .car-btn.next {
+  right: 8px;
+}
+.card .car-dots {
+  bottom: 10px;
+}
+.carousel.single .car-btn,
+.carousel.single .car-dots {
+  display: none;
 }
 /* ============================================================
    18 · BOLA DE NEVE E DICA (tema de Natal)
