@@ -42,7 +42,7 @@ const STORES = [
     name: "Unidade Centro",
     addr: "Rua do Comércio, 416 – Centro",
     hours: "Seg a sex 8h às 18h · Sáb 8h às 14h",
-    phone: "5582991866533",
+    phone: "5582982036966",
     q: "Rua do Comércio, 416, Centro, Maceió - AL",
   },
   {
@@ -50,7 +50,7 @@ const STORES = [
     name: "Unidade Maceió Shopping",
     addr: "Maceió Shopping",
     hours: "Seg a sáb 9h às 22h · Dom 13h às 21h",
-    phone: "5582991866533",
+    phone: "5582982036966",
     q: "Maceió Shopping, Maceió - AL",
   },
 ];
