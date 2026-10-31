@@ -419,7 +419,7 @@ header {
    ============================================================ */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
   margin-top: 40px;
 }
@@ -929,7 +929,7 @@ footer a {
 }
 /* Carrossel dentro dos cards de produtos (mesmo componente do topo, em tamanho menor) */
 .card .carousel {
-  height: 230px;
+  height: 280px;
   overflow: hidden;
 }
 .card .carousel .media {
