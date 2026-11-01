@@ -49,7 +49,7 @@ const STORES = [
     id: "shopping",
     name: "Unidade Maceió Shopping",
     addr: "Maceió Shopping",
-    hours: "Seg a sáb 9h às 22h · Dom 13h às 21h",
+    hours: "Seg a sáb 10h às 22h · Dom 12h às 21h",
     phone: "5582982036966",
     q: "Maceió Shopping, Maceió - AL",
   },
