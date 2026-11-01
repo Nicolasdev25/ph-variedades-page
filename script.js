@@ -218,6 +218,11 @@ document
       c.id === "car" ? 0 : 700 * n,
     ),
   );
+// Fundo desfocado das fotos dos cards
+document.querySelectorAll(".card .carousel .media").forEach((m) => {
+  const im = m.querySelector(".photo");
+  if (im) m.style.setProperty("--bgimg", `url("${im.src}")`);
+});
 
 // ============================================================
 // 8 · BOLA DE NEVE: segurar (mouse ou dedo) para criar, soltar para jogar (só no Natal)

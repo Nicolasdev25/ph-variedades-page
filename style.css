@@ -929,29 +929,26 @@ footer a {
 }
 /* Carrossel dentro dos cards de produtos (mesmo componente do topo, em tamanho menor) */
 .card .carousel {
-  height: 280px;
+  aspect-ratio: 4/3;
   overflow: hidden;
+  background: #101820;
 }
-.card .carousel .media {
-  border-radius: 0;
+.card .carousel .media::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: var(--bgimg, none) center/cover no-repeat;
+  filter: blur(18px) brightness(0.85);
+  transform: scale(1.1);
 }
-.card .car-btn {
-  width: 34px;
-  height: 34px;
-  font-size: 1.3rem;
+.card .carousel .photo {
+  object-fit: contain;
+  z-index: 1;
 }
-.card .car-btn.prev {
-  left: 8px;
-}
-.card .car-btn.next {
-  right: 8px;
-}
-.card .car-dots {
-  bottom: 10px;
-}
-.carousel.single .car-btn,
-.carousel.single .car-dots {
-  display: none;
+@media (max-width: 820px) {
+  .card .carousel {
+    aspect-ratio: 1/1;
+  }
 }
 /* ============================================================
    18 · BOLA DE NEVE E DICA (tema de Natal)
